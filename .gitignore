@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+server_output.txt
+test_output.json
+test_output.txt
+tmp_script.js
+.orchids/
