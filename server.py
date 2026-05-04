@@ -697,7 +697,8 @@ async def undo_review(rid:str):
         if r.review_id==rid and r.status in ("merged","separated"):
             old_dec = r.status
             r.status="pending"; r.reviewed_at=None; r.reviewer_notes=None; r.reviewer=None
-            state.audit_log.append(AuditEntry(timestamp=datetime.now().isoformat(),ubid=r.ubid,action="reviewer_undo",details=f"Decision rolled back by {"Admin"}: {old_dec} → pending",actor="Admin",icon="↩"))
+            role_name = "Admin"
+            state.audit_log.append(AuditEntry(timestamp=datetime.now().isoformat(),ubid=r.ubid,action="reviewer_undo",details=f"Decision rolled back by {role_name}: {old_dec} → pending",actor="Admin",icon="↩"))
             s=state.reviewer_stats
             if old_dec=="merged":s["merges"]-=1; s["session_merges"]-=1
             else:s["separations"]-=1; s["session_separations"]-=1
@@ -705,7 +706,7 @@ async def undo_review(rid:str):
                 if ev.get("record_a_id")==r.record_a_id and ev.get("record_b_id")==r.record_b_id:
                     ev.pop("reviewer_notes",None); ev.pop("reviewer_decision",None); ev.pop("reviewer",None)
             state.rollback_count+=1
-            emit_event("review_undone",f"↩ {"Admin"} undid {old_dec} for {r.record_a} ↔ {r.record_b}")
+            emit_event("review_undone",f"↩ {role_name} undid {old_dec} for {r.record_a} ↔ {r.record_b}")
             return {"ok":True,"status":"pending","rollback_count":state.rollback_count}
     return JSONResponse(status_code=404,content={"error":"Not found"})
 
@@ -891,7 +892,8 @@ def check_export_rate(req:Request):
 def add_watermark(w):
     ip=state.export_counts.get("_last_ip","127.0.0.1")
     n=sum(state.export_counts.get(k,0) for k in state.export_counts if k!="_last_ip")
-    w.writerow([f"CONFIDENTIAL — UdyamGraph Export — {"Admin"} — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} IST — Export #{n} of 3"])
+    role_label = "Admin"
+    w.writerow([f"CONFIDENTIAL — UdyamGraph Export — {role_label} — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} IST — Export #{n} of 3"])
     w.writerow([])
 
 def mask_pan_export(pan):
