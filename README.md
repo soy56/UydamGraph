@@ -2,7 +2,31 @@
 
 A production-grade entity resolution system for Karnataka's business registrations across multiple government departments.
 
-## 🚀 Quick Start
+---
+
+## ⚡ Quick Review (Standalone Demo)
+
+The fastest way for reviewers to test the platform without setting up Kafka or Neo4j:
+
+1. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Start the Web Console**:
+   ```bash
+   python server.py
+   ```
+
+3. **Access the UI**:
+   Open **[http://localhost:8000](http://localhost:8000)** in your browser.
+
+4. **Test the Pipeline**:
+   In the dashboard, click **⚡ Run Pipeline**. Watch the live event ticker process 11 records from 5 departments and resolve them into unified identities (UBIDs).
+
+---
+
+## 🚀 Full Installation (Production Stack)
 
 ### Prerequisites
 
