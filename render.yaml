@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: udyamgraph-demo
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PII_HMAC_SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.9.18

@@ -1,0 +1,114 @@
+{
+  "status": "success",
+  "records_processed": 8,
+  "candidate_pairs": 9,
+  "safe_matches": [
+    {
+      "record_a_id": "CT-BLR-2024-001",
+      "record_b_id": "SE-BLR-2024-002",
+      "business_name_a": "TECH INNOVATIONS PVT LTD",
+      "business_name_b": "TECH INNOVATIONS PVT LTD",
+      "department_a": "commercial_taxes",
+      "department_b": "shops_establishments",
+      "pan_match": true,
+      "is_safe": true,
+      "confidence": 0.85
+    },
+    {
+      "record_a_id": "SE-BLR-2024-002",
+      "record_b_id": "FB-BLR-2024-003",
+      "business_name_a": "TECH INNOVATIONS PVT LTD",
+      "business_name_b": "TECH INNOVATIONS PRIVATE LIMITED",
+      "department_a": "shops_establishments",
+      "department_b": "factories_board",
+      "pan_match": true,
+      "is_safe": true,
+      "confidence": 0.85
+    },
+    {
+      "record_a_id": "CT-MYS-2024-004",
+      "record_b_id": "SE-MYS-2024-005",
+      "business_name_a": "GREEN AGRO PRODUCTS",
+      "business_name_b": "GREEN AGRO PRODUCTS",
+      "department_a": "commercial_taxes",
+      "department_b": "shops_establishments",
+      "pan_match": true,
+      "is_safe": true,
+      "confidence": 0.85
+    },
+    {
+      "record_a_id": "CT-BLR-2024-001",
+      "record_b_id": "FB-BLR-2024-003",
+      "business_name_a": "TECH INNOVATIONS PVT LTD",
+      "business_name_b": "TECH INNOVATIONS PRIVATE LIMITED",
+      "department_a": "commercial_taxes",
+      "department_b": "factories_board",
+      "pan_match": true,
+      "is_safe": true,
+      "confidence": 0.85
+    }
+  ],
+  "blocked_matches": [
+    {
+      "record_a_id": "CT-BLR-2024-001",
+      "record_b_id": "CT-BLR-2024-008",
+      "business_name_a": "TECH INNOVATIONS PVT LTD",
+      "business_name_b": "YELLOW FOODS PVT LTD",
+      "department_a": "commercial_taxes",
+      "department_b": "commercial_taxes",
+      "pan_match": false,
+      "is_safe": false,
+      "confidence": 0.85,
+      "blocked_reason": "Both records have PAN numbers, but they are DIFFERENT. This is strong evidence of different legal entities."
+    },
+    {
+      "record_a_id": "CT-BLR-2024-001",
+      "record_b_id": "CT-MNG-2024-007",
+      "business_name_a": "TECH INNOVATIONS PVT LTD",
+      "business_name_b": "RED PHARMA PVT LTD",
+      "department_a": "commercial_taxes",
+      "department_b": "commercial_taxes",
+      "pan_match": false,
+      "is_safe": false,
+      "confidence": 0.85,
+      "blocked_reason": "Both records have PAN numbers, but they are DIFFERENT. This is strong evidence of different legal entities."
+    },
+    {
+      "record_a_id": "CT-MNG-2024-007",
+      "record_b_id": "CT-BLR-2024-008",
+      "business_name_a": "RED PHARMA PVT LTD",
+      "business_name_b": "YELLOW FOODS PVT LTD",
+      "department_a": "commercial_taxes",
+      "department_b": "commercial_taxes",
+      "pan_match": false,
+      "is_safe": false,
+      "confidence": 0.85,
+      "blocked_reason": "Both records have PAN numbers, but they are DIFFERENT. This is strong evidence of different legal entities."
+    },
+    {
+      "record_a_id": "SE-BLR-2024-002",
+      "record_b_id": "CT-BLR-2024-008",
+      "business_name_a": "TECH INNOVATIONS PVT LTD",
+      "business_name_b": "YELLOW FOODS PVT LTD",
+      "department_a": "shops_establishments",
+      "department_b": "commercial_taxes",
+      "pan_match": false,
+      "is_safe": false,
+      "confidence": 0.85,
+      "blocked_reason": "Both records have PAN numbers, but they are DIFFERENT. This is strong evidence of different legal entities."
+    },
+    {
+      "record_a_id": "SE-BLR-2024-002",
+      "record_b_id": "CT-MNG-2024-007",
+      "business_name_a": "TECH INNOVATIONS PVT LTD",
+      "business_name_b": "RED PHARMA PVT LTD",
+      "department_a": "shops_establishments",
+      "department_b": "commercial_taxes",
+      "pan_match": false,
+      "is_safe": false,
+      "confidence": 0.85,
+      "blocked_reason": "Both records have PAN numbers, but they are DIFFERENT. This is strong evidence of different legal entities."
+    }
+  ],
+  "processing_time": 0.0016908645629882812
+}

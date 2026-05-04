@@ -1,0 +1,113 @@
+{
+  "records": [
+    {
+      "record_id": "CT-BLR-2024-001",
+      "business_name": "TECH INNOVATIONS PVT LTD",
+      "pan": "AAAAA1000A",
+      "gstin": "29AAAAA1000A1Z5",
+      "department": "commercial_taxes",
+      "district": "Bangalore Urban",
+      "city": "Bangalore",
+      "pincode": "560001",
+      "legal_status": "Private Limited Company",
+      "business_type": "IT Services",
+      "status": "Active",
+      "reg_date": "2024-01-15"
+    },
+    {
+      "record_id": "SE-BLR-2024-002",
+      "business_name": "TECH INNOVATIONS PVT LTD",
+      "pan": "AAAAA1000A",
+      "department": "shops_establishments",
+      "district": "Bangalore Urban",
+      "city": "Bangalore",
+      "pincode": "560001",
+      "legal_status": "Private Limited Company",
+      "business_type": "IT Services",
+      "status": "Active",
+      "reg_date": "2024-01-20"
+    },
+    {
+      "record_id": "FB-BLR-2024-003",
+      "business_name": "TECH INNOVATIONS PRIVATE LIMITED",
+      "pan": "AAAAA1000A",
+      "department": "factories_board",
+      "district": "Bangalore Urban",
+      "city": "Bangalore",
+      "pincode": "560001",
+      "legal_status": "Private Limited Company",
+      "business_type": "IT Services",
+      "status": "Active",
+      "reg_date": "2024-02-01"
+    },
+    {
+      "record_id": "CT-MYS-2024-004",
+      "business_name": "GREEN AGRO PRODUCTS",
+      "pan": "BBBBB2000B",
+      "gstin": "29BBBBB2000B1Z5",
+      "department": "commercial_taxes",
+      "district": "Mysuru",
+      "city": "Mysuru",
+      "pincode": "570001",
+      "legal_status": "Partnership",
+      "business_type": "Agricultural Products",
+      "status": "Active",
+      "reg_date": "2023-06-10"
+    },
+    {
+      "record_id": "SE-MYS-2024-005",
+      "business_name": "GREEN AGRO PRODUCTS",
+      "pan": "BBBBB2000B",
+      "department": "shops_establishments",
+      "district": "Mysuru",
+      "city": "Mysuru",
+      "pincode": "570001",
+      "legal_status": "Partnership",
+      "business_type": "Agricultural Products",
+      "status": "Active",
+      "reg_date": "2023-06-15"
+    },
+    {
+      "record_id": "CT-BLR-2024-006",
+      "business_name": "BLUE TEXTILES LTD",
+      "pan": "CCCCC3000C",
+      "gstin": "29CCCCC3000C1Z5",
+      "department": "commercial_taxes",
+      "district": "Bangalore Urban",
+      "city": "Bangalore",
+      "pincode": "560002",
+      "legal_status": "Private Limited Company",
+      "business_type": "Textile Manufacturing",
+      "status": "Active",
+      "reg_date": "2022-03-20"
+    },
+    {
+      "record_id": "CT-MNG-2024-007",
+      "business_name": "RED PHARMA PVT LTD",
+      "pan": "DDDDD4000D",
+      "gstin": "29DDDDD4000D1Z5",
+      "department": "commercial_taxes",
+      "district": "Mangaluru",
+      "city": "Mangaluru",
+      "pincode": "575001",
+      "legal_status": "Private Limited Company",
+      "business_type": "Pharmaceutical Manufacturing",
+      "status": "Active",
+      "reg_date": "2021-08-05"
+    },
+    {
+      "record_id": "CT-BLR-2024-008",
+      "business_name": "YELLOW FOODS PVT LTD",
+      "pan": "EEEEE5000E",
+      "gstin": "29EEEEE5000E1Z5",
+      "department": "commercial_taxes",
+      "district": "Bangalore Urban",
+      "city": "Bangalore",
+      "pincode": "560003",
+      "legal_status": "Private Limited Company",
+      "business_type": "Food Processing",
+      "status": "Active",
+      "reg_date": "2023-11-12"
+    }
+  ]
+}
