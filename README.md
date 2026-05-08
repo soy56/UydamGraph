@@ -108,12 +108,12 @@ Then open: http://localhost:8000
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                    UdyamGraph Pipeline                        │
+│                    UdyamGraph Pipeline                       │
 ├──────────────────────────────────────────────────────────────┤
-│                                                               │
-│  Ingest → Tokenize → Block → Features → Classify → Store    │
-│  (Kafka)  (HMAC)     (LSH)   (SBERT)    (XGBoost)  (Neo4j)  │
-│                                                               │
+│                                                              │
+│  Ingest → Tokenize → Block → Features → Classify → Store     │
+│  (Kafka)  (HMAC)     (LSH)   (SBERT)    (XGBoost)  (Neo4j)   │
+│                                                              │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -270,10 +270,6 @@ Before deploying to production:
 3. Write docstrings for public APIs
 4. Test with synthetic data before real data
 5. Never commit secrets or credentials
-
-## 📄 License
-
-[Add your license here]
 
 ## 🆘 Support
 
