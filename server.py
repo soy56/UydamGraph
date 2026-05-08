@@ -15,6 +15,8 @@ All critical + high-value features:
 - Full 7-step demo tour
 """
 import os,sys,time,logging,uuid,random,csv,io,json,re,asyncio
+import httpx
+from contextlib import suppress
 import numpy as np
 from typing import Dict,Any,List,Optional
 from dataclasses import dataclass,asdict,field
@@ -115,6 +117,40 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["Content-Type", "Authorization"]
 )
+
+# ── Keep-alive self-ping (prevents Render free-tier sleep) ──────────────────
+KEEPALIVE_TASK = None
+
+async def self_ping_loop():
+    url = os.getenv("RENDER_EXTERNAL_URL")
+    interval = int(os.getenv("SELF_PING_INTERVAL_SECONDS", "840"))  # 14 min
+    if not url:
+        logger.info("Self-ping disabled: RENDER_EXTERNAL_URL not set")
+        return
+    health_url = f"{url.rstrip('/')}/api/health"
+    async with httpx.AsyncClient(timeout=15.0) as client:
+        while True:
+            try:
+                resp = await client.get(health_url)
+                logger.info("Self-ping OK: %s %s", health_url, resp.status_code)
+            except Exception as e:
+                logger.warning("Self-ping failed: %s", e)
+            await asyncio.sleep(interval)
+
+@app.on_event("startup")
+async def startup_keepalive():
+    global KEEPALIVE_TASK
+    if os.getenv("ENABLE_SELF_PING", "false").lower() == "true":
+        KEEPALIVE_TASK = asyncio.create_task(self_ping_loop())
+        logger.info("Self-ping keep-alive task started")
+
+@app.on_event("shutdown")
+async def shutdown_keepalive():
+    global KEEPALIVE_TASK
+    if KEEPALIVE_TASK:
+        KEEPALIVE_TASK.cancel()
+        with suppress(asyncio.CancelledError):
+            await KEEPALIVE_TASK
 
 # ═══════════════════════════════════════════════════════════════════════
 #  Karnataka Districts
